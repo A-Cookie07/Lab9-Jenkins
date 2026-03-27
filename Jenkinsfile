@@ -20,11 +20,11 @@ pipeline {
 
         stage('Package Management'){
             steps {
-                apt-get update
-                apt-get install python3-ncclient
-                apt-get install python3-pandas
-                apt-get install python3-netaddr
-                apt-get install python3-prettytable
+                sh 'apt-get update'
+                sh 'apt-get install python3-ncclient'
+                sh 'apt-get install python3-pandas'
+                sh 'apt-get install python3-netaddr'
+                sh 'apt-get install python3-prettytable'
             }
         }
     }
