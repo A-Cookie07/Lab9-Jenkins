@@ -20,10 +20,7 @@ pipeline {
 
         stage('Package Management'){
             steps {
-                sh 'apt-get install python3-ncclient'
-                sh 'apt-get install python3-pandas'
-                sh 'apt-get install python3-netaddr'
-                sh 'apt-get install python3-prettytable'
+                sh 'whoami'
             }
         }
     }
