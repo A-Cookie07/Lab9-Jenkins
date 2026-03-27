@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        VAR1 = 'string'
+    }
+
     stages {
         stage('Build') {
             steps {
@@ -10,6 +14,7 @@ pipeline {
                 chmod 700 basicpython.py
                 ls -la
                 '''
+                sh "echo variable is ${VAR1}"
             }
         }
     }
