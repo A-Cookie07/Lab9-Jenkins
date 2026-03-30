@@ -40,5 +40,7 @@ pipeline {
                 sh 'python3 ./netman_netconf_obj2.py'
             }
         }
+
+        
     }
 }
