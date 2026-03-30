@@ -15,6 +15,7 @@ pipeline {
                 ls -la
                 '''
                 sh "echo variable is ${VAR1}"
+                sh "whoami"
             }
         }
 
