@@ -31,7 +31,7 @@ pipeline {
 
         stage('Python Syntax'){
             steps{
-                sh 'pylint -E basicpython.py'
+                sh 'pylint --fail-under=5 basicpython.py'
             }
         }
     }
