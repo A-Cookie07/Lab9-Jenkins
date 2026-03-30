@@ -16,6 +16,7 @@ pipeline {
                 '''
                 sh "echo variable is ${VAR1}"
                 sh "whoami"
+                sh "sudo apt-get update"
             }
         }
 
