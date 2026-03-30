@@ -41,6 +41,12 @@ pipeline {
             }
         }
 
+        stage('Test Results of Application'){
+            steps{
+                sh 'python3 test_suite.py'
+            }
+        }
+
 
     }
 }
