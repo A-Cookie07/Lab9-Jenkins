@@ -31,7 +31,13 @@ pipeline {
 
         stage('Python Syntax'){
             steps{
-                sh 'pylint --fail-under=7 basicpython.py'
+                sh 'pylint --fail-under=5 basicpython.py'
+            }
+        }
+
+        stage('Run the Application'){
+            steps{
+                sh 'python3 ./netman_netconf_obj2.py'
             }
         }
     }

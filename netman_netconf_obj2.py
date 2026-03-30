@@ -54,7 +54,7 @@ if __name__ == "__main__":
                                      hostkey_verify=False,
                                      device_params={'name': 'iosxr'},
                                      allow_agent=False,
-                                     look_for_keys=True)
+                                     look_for_keys=False)
         print('Logging into router {} and sending configurations'.format(ROUTERS[i]))
         cfg1 = cfg % (HOST[i], LO_NAME[i], LO_IP[i], MASK[i], NETWORKS[i], WILDCARD[i], AREA[i])
         edit_cfg = connection.edit_config(target='running', config=cfg1)
@@ -77,7 +77,7 @@ if __name__ == "__main__":
                                      hostkey_verify=False,
                                      device_params={'name': 'iosxr'},
                                      allow_agent=False,
-                                     look_for_keys=True)
+                                     look_for_keys=False)
         print('Pulling information from router {} to display'.format(ROUTERS[i]))
 
         fetch_hostname = FETCH_INFO % ('| i hostname')
