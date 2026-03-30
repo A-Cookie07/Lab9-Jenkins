@@ -19,35 +19,6 @@ pipeline {
             }
         }
 
-        stage('Package Management'){
-            steps {
-                sh 'sudo apt-get update'
-                sh 'sudo apt-get -y install python3-ncclient'
-                sh 'sudo apt-get -y install python3-pandas'
-                sh 'sudo apt-get -y install python3-netaddr'
-                sh 'sudo apt-get -y install python3-prettytable'
-                sh 'sudo apt-get -y install pylint'
-            }
-        }
-
-        stage('Python Syntax'){
-            steps{
-                sh 'pylint --fail-under=5 ./netman_netconf_obj2.py'
-            }
-        }
-
-        stage('Run the Application'){
-            steps{
-                sh 'python3 ./netman_netconf_obj2.py'
-            }
-        }
-
-        stage('Test Results of Application'){
-            steps{
-                sh 'python3 test_suite.py'
-            }
-        }
-
 
     }
 }
