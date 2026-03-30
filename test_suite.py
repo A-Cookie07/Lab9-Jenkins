@@ -14,7 +14,7 @@ FETCH_INFO = '''
     		</filter>
     		'''
 
-
+#get loopback 99 using the code of the provided function
 def fetch_99():
     connection = manager.connect(host='198.51.100.13',
                                      port=22,
