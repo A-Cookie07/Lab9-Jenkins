@@ -14,13 +14,6 @@ FETCH_INFO = '''
     		</filter>
     		'''
 
-PING_COMMAND = '''
-    		<filter>
-    		<config-format-text-block>
-    		do ping 198.51.100.2
-    		</config-format-text-block>
-    		</filter>
-    		'''
 
 def fetch_99():
     connection = manager.connect(host='198.51.100.13',
