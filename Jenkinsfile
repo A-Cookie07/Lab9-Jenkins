@@ -20,12 +20,12 @@ pipeline {
 
         stage('Package Management'){
             steps {
-                sh 'apt-get update'
-                sh 'apt-get -y install python3-ncclient'
-                sh 'apt-get -y install python3-pandas'
-                sh 'apt-get -y install python3-netaddr'
-                sh 'apt-get -y install python3-prettytable'
-                sh 'apt-get -y install pylint'
+                sh 'sudo apt-get update'
+                sh 'sudo apt-get -y install python3-ncclient'
+                sh 'sudo apt-get -y install python3-pandas'
+                sh 'sudo apt-get -y install python3-netaddr'
+                sh 'sudo apt-get -y install python3-prettytable'
+                sh 'sudo apt-get -y install pylint'
             }
         }
 
