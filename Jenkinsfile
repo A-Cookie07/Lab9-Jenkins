@@ -53,7 +53,7 @@ pipeline {
     post {
         success {
             script{
-                mail(
+                emailext(
                 to: 'zach0311@comcast.net',
                 subject: "Build Success",
                 body: "The Jobs all succesfully completed"
