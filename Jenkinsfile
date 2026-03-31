@@ -20,6 +20,7 @@ pipeline {
 
         stage('Package Management'){
             steps {
+                sh "sudo -l"
                 sh 'sudo apt-get update'
                 sh 'sudo apt-get -y install python3-ncclient'
                 sh 'sudo apt-get -y install python3-pandas'
