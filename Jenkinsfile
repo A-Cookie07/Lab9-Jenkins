@@ -52,9 +52,11 @@ pipeline {
     }
     post {
         success {
-            mail to: 'zach0311@comcast.net',
+            emailext(
+            to: 'zach0311@comcast.net',
             subject: "Build Success",
             body: "The Jobs all succesfully completed"
+            )
         }
     }
 }
