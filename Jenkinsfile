@@ -18,7 +18,6 @@ pipeline {
             }
         }
 
-        #please work
         stage('Package Management'){
             steps {
                 sh "sudo -l"
